@@ -27,8 +27,16 @@
             padding-top: 50px;
         }
 
+        .container-seccion-inicio {
+            padding-top: 120px;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-bottom: 120px;
+        }
+
         #menu {
-            padding-top: 10px padding-bottom 10px
+            padding-top: 10px;
+            padding-bottom 10px
         }
 
         #menu a {
@@ -39,6 +47,64 @@
         .texto-título {
             color: black;
             font-family: "Chewy", cursive;
+        }
+
+        .texto-título-h1 {
+            color: black;
+            font-size: 40px;
+        }
+
+        .texto-título-h2 {
+            color: #5c5c5c;
+            font-size: 50px;
+            font-family: "Chewy";
+        }
+
+        .texto-título-h22 {
+            color: #c47345;
+            font-size: 80px;
+            font-family: "Chewy";
+        }
+
+        .texto-título-p {
+            color: #5c5c5c;
+            font-size: 20px;
+        }
+
+        .intro-btn {
+            background: #f47c5c;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pet {
+            position: absolute;
+            bottom: -8px;
+            filter: drop-shadow(0 16px 32px rgba(0, 0, 0, .35));
+        }
+
+        .cat {
+            right: 23%;
+            bottom: 7%;
+            width: min(36vw, 400px);
+            z-index: 1;
+            opacity: .95
+        }
+
+        .dog {
+            top: 16%;
+            width: min(48vw, 675px);
+            z-index: 2
         }
 
         .fondo-color {
@@ -173,6 +239,57 @@
                 font-size: 18px;
             }
         }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            background: transparent;
+        }
+
+        .card {
+            background: #f5dcd7;
+            border: 2px solid #f0b7b0;
+            border-radius: 12px;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .card i {
+            font-size: 40px;
+            color: #a17c74;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #5b5553;
+            font-weight: 600;
+        }
+
+        section.cards-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 
 </head>
@@ -214,14 +331,59 @@
 
         <section>
             <div class="fondo-color-inicio">
-                <div class="row">
-                    <div class="col-6">
+                <div class="row container-seccion-inicio">
+                    <div class="col-6 align-self-center">
                         <div class="d-inline-block align-text-top">
-                            <img src="img/pawlife.png" alt="" height="30px" width="auto">pawlife
+                            <img src="img/pawlife.png" alt="" height="60px" width="auto"><span
+                                class="texto-título-h1">pawlife</span>
+                            <p class="texto-título-h2">BIENVENIDOS A <span class="texto-título-h22">PAWLIFE</span></p>
+                            <p class="texto-título-p">En Pawlife, creemos que nuestros <br>compañeros peludos merecen
+                                una vida feliz, <br>sana y llena de amor.</p>
+                            <br>
+                            <a class="intro-btn" href="#Alimentación">VER ALIMENTOS</a>
                         </div>
+                    </div>
+                    <div class="col-6">
+                        <img class="pet cat" src="img/Introducción-Foto-Gato.png" alt="Cat behind">
+                        <img class="pet dog" src="img/Introducción-Foto-Perro.png" alt="Dog in front">
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <section class="cards-section">
+                <div class="cards">
+                    <div class="card">
+                        <a href="#Alimentación">
+                            <h3>Alimentos</h3>
+                        </a>
+                        <br>
+                        <img src="img/animals-dog-bone-icon.png" alt="" height="40%">
+                    </div>
+                    <div class="card">
+                        <a href="#salud">
+                            <h3>Salud</h3>
+                        </a>
+                        <br>
+                        <img src="img/heart-icon.png" alt="" height="40%">
+                    </div>
+                    <div class="card">
+                        <a href="#Educación">
+                            <h3>Educación</h3>
+                        </a>
+                        <br>
+                        <img src="img/lightbulb-icon.png" alt="" height="50%">
+                    </div>
+                    <div class="card">
+                        <a href="#Afecto e Interacción">
+                            <h3>Afecto</h3>
+                        </a>
+                        <br>
+                        <img src="img/afecto-icon.webp" alt="" height="40%">
+                    </div>
+                </div>
+            </section>
         </section>
 
         <section id="Alimentación" style="background-color: #98acda;">
