@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PawLife</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .margin {
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+
+        .negtrita {
+            font-weight: bold;
+        }
+
+        .padding {
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+
+        #menu {
+            padding-top: 10px padding-bottom 10px
+        }
+
+        #menu a {
+            color: black;
+            font-family: "Chewy", cursive;
+        }
+
+        .texto-título {
+            color: black;
+            font-family: "Chewy", cursive;
+        }
+
+        .fondo-color {
+            background-color: rgb(210, 189, 63);
+        }
+
+        .fondo-color-inicio {
+            background-image: linear-gradient(to right, #f3e2d9, #e4989f);
+        }
+
+        .accordion {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+
+        }
+
+        .accordion-item1 {
+            border: 5px solid #96a6a1;
+            background-color: rgb(240, 255, 172);
+        }
+
+        .accordion-item2 {
+            border: 5px solid #e4989f;
+            background-color: #f3e2d9;
+        }
+
+        .accordion-item3 {
+            border: 5px solid #f47c5c;
+            background-color: #ffccbf;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: #1a1a1a;
+        }
+
+        #salud {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 48vw 1fr;
+            background: #f0e1d9;
+            align-items: center;
+        }
+
+        .salud-figure img {
+            width: 100%;
+            max-height: 100vh;
+            object-fit: contain;
+            object-position: left center;
+        }
+
+        .salud-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .salud-content h2 {
+            font-family: "Chewy", cursive;
+            font-size: 80px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .salud-content p {
+            max-width: 620px;
+            margin: 0 auto 40px auto;
+            font-size: 22px;
+            line-height: 1.45;
+        }
+
+        .salud-icons {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+        .salud-icons li {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .salud-icons img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #bfcde6;
+            object-fit: contain;
+            padding: 8px;
+            margin-bottom: 12px;
+        }
+
+        .salud-btn {
+            background: #f3d56b;
+            padding: 16px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            font-size: 20px;
+            width: 70%;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            #salud {
+                grid-template-columns: 1fr;
+            }
+
+            .salud-figure img {
+                height: 45vh;
+            }
+
+            .salud-content h2 {
+                font-size: 46px;
+            }
+
+            .salud-content p {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <section id="menu">
+            <nav class="navbar bg-body-tertiary ">
+                <div class="container fondo-color">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/pawlife.png" alt="Logo" width="auto" height="30"
+                            class="d-inline-block align-text-top">
+                        pawlife
+                    </a>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="...">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Alimentación">Alimentación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">Salud</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">Educación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="...">Afecto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+
+        <section>
+            <div class="fondo-color-inicio">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="d-inline-block align-text-top">
+                            <img src="img/pawlife.png" alt="" height="30px" width="auto">pawlife
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Alimentación" style="background-color: #98acda;">
+            <div class="container padding">
+                <h1 class="text-center" style="font-family: 'Chewy', cursive; color: white;">Alimentos buenos para tu
+                    perro</h1>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <img src="img/comida_perro.jpg" alt="comida" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-6 align-self-center">
+                        <p class="lead text-center mx-auto padding col align-self-center" style="max-width: 800px;">
+                            Aunque algunos alimentos de consumo humano son perjudiciales para nuestros compañeros
+                            cuadrúpedos,
+                            otros pueden resultar muy beneficiosos para su salud. Si quieres complementar la dieta de tu
+                            mascota,
+                            a continuación te ofrecemos una lista de alimentos buenos para perros que solemos tener en
+                            casa.
+                        </p>
+                    </div>
+                </div>
+                <div class="container padding">
+                    <div class="mt-5" style="max-width: 800px; margin: 0 auto;">
+                        <h4 class="fw-semibold">Te compartimos algunos alimentos buenos para perros
+                            que solemos tener en
+                            casa</h4>
+
+                        <h5 style="font-family: 'Chewy', cursive; color: white;">1) Atún, salmón y sardinas</h5>
+                        <p>
+                            El atún, salmón y las sardinas son alimentos beneficiosos para los perros, ya que contienen
+                            proteínas
+                            de gran calidad, ácidos grasos Omega 3 y vitaminas. Estos nutrientes refuerzan su sistema
+                            inmunitario,
+                            facilitan la digestión y ayudan a cuidar la piel y el pelaje de tu compañero cuadrúpedo.
+                        </p>
+
+                        <h5 style="font-family: 'Chewy', cursive; color: white;">2) Hígado</h5>
+                        <p>
+                            Además de contener una gran cantidad de hierro, el hígado es rico en vitamina A, B y K.
+                            Puedes
+                            preparar
+                            unas golosinas muy crujientes, sanas y sabrosas para tu mascota cocinando trozos de hígado
+                            al
+                            horno o a la plancha,
+                            evitando toda la humedad.
+                        </p>
+
+                        <h5 style="font-family: 'Chewy', cursive; color: white;">3) Huevos</h5>
+                        <p>
+                            Los huevos se encuentran entre las comidas más saludables y completas. Contienen proteínas
+                            de
+                            calidad y todas
+                            las combinaciones esenciales que tu perro necesita, además de una gran variedad de vitaminas
+                            y
+                            minerales muy
+                            beneficiosos para el sistema nervioso.
+                        </p>
+
+                        <h5 style="font-family: 'Chewy', cursive; color: white;">4) Brócoli</h5>
+                        <p>
+                            El brócoli es una verdura muy sana y digestiva para los perros. Gracias a su alto conteido
+                            de
+                            vitaminas y minerales,
+                            cuenta con propiedades antioxidantes y depurativas
+                        </p>
+
+                        <h5 style="font-family: 'Chewy', cursive; color: white;">5) Avena</h5>
+                        <p>
+                            Gracias a su alto contenido de fibra soluble, la avena es un alimento muy sano para perros
+                            que
+                            tienen probelas de regularidad intesinal.
+                            También es una excelente alternatica para los animales con alegria al trigo.
+                        </p>
+                    </div>
+                </div>
+
+        </section>
+
+        <section id="salud" class="salud">
+            <div class="salud-figure">
+                <img src="img/Doggy and Cat.png" alt="Salud y bienestar mascotas">
+            </div>
+
+            <div class="salud-content">
+                <h2>Salud y Bienestar</h2>
+                <p>Consejos para cuidar la salud física y emocional de tus peludos. Mantén su bienestar con rutinas
+                    simples y con mucho amor.</p>
+
+                <ul class="salud-icons">
+                    <li>
+                        <a href="https://www.tiendanimal.es/articulos/por-que-es-tan-importante-acudir-al-veterinario/?srsltid=AfmBOooWTdnZqAWctr4V4VMcIYafi93mBxuvH8l8WKIA1xo5I_5WOa1I"
+                            target="_blank">
+                            <img src="img/1 icon.png" alt="Veterinario">
+                        </a>
+                        <b>Visitas al veterinario</b>
+                    </li>
+
+                    <li>
+                        <a href="https://www.anfaac.org/anfaac/fact-sheets/ejercicio--entrenamiento-y-comportamiento-de-los-animales-de-compania_608_68_459_0_1_in.html"
+                            target="_blank">
+                            <img src="img/2 icon.png" alt="Ejercicio">
+                        </a>
+                        <b>Ejercicio y estimulación</b>
+                    </li>
+
+                    <li>
+                        <a href="https://unamglobal.unam.mx/global_revista/guia-para-la-alimentacion-de-perros-y-gatos/"
+                            target="_blank">
+                            <img src="img/3 icon.png" alt="Nutrición">
+                        </a>
+                        <b>Nutrición balanceada</b>
+                    </li>
+                </ul>
+
+
+                <a class="salud-btn" href="https://www.royalcanin.com/es/dogs/health-and-wellbeing" target="_blank">Leer
+                    Más</a>
+
+            </div>
+        </section>
+
+
+
+        <section id="Educación" style="background-color: #98acda;">
+
+            <div class="container">
+                <div class="salud-content">
+                    <h2>Educación y Socialización</h2>
+                    <p>Aprende comandos básicos y técnicas de socialización para fortalecer la confianza y el vínculo
+                        con tus peludos.</p>
+
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <video src="img/video.mp4" class="img-fluid"></video>
+                            </div>
+                        </div>
+
+                        <div class="col-6 align-self-center">
+                            <h3>Comandos que fortalecen el vínculo</h3>
+                            <p class="lead text-center mx-auto padding col align-self-center" style="max-width: 800px;">
+                                La educación no se trata solo de obediencia, sino de conexión. A través de comandos como
+                                ‘siéntate’, ‘quieto’ o ‘ven’, fomentas la comunicación y la confianza mutua. Además, la
+                                socialización temprana ayuda a que se adapten mejor a otros animales y personas.
+                            </p>
+
+                        </div>
+
+                        <div class="container">
+
+                            <h3 class="text-center padding">Tips de Educación</h3>
+                            <ul class="salud-icons">
+                                <li>
+                                    <img src="img/3 icon.png" alt="Refuerzo positivo"><br>
+                                    <b>Usa refuerzos positivos</b><br>(premios o caricias)
+                                </li>
+                                <li>
+                                    <img src="img/2 icon.png" alt="Sesiones cortas"><br>
+                                    <b>Mantén sesiones cortas</b><br>y alegres
+                                </li>
+                                <li>
+                                    <img src="img/icon4.png" alt="Evita gritos"><br>
+                                    <b>Evita los gritos</b><br>o castigos
+                                </li>
+                                <li>
+                                    <img src="img/pata.png" alt="Constancia"><br>
+                                    <b>Repite los comandos</b><br>de forma constante y con calma
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+        <section id="Afecto e Interacción" class="padding" style="background-color: #ffccbf;">
+
+            <h1 class="d-flex justify-content-center" style="font-family: 
+            'Chewy', cursive; color: #f47c5c;;">Afecto e Interacción </h1>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item1">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            <h3 style="font-family: 'Chewy', cursive; color:  #f47c5c;">PERROS</h3>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p>
+                            <ul>
+                                <li><span style="color: #f47c5c"><strong>Dedica tiempo de calidad:</strong></span><br>
+                                    Jueguen, paseen y pasen tiempo juntos.
+                                    El juego fortalece el vínculo y reduce el estrés para ambos.
+                                </li>
+                                <li><span style="color: #f47c5c"><strong>Establece límites claros:</strong></span> <br>
+                                    Los límites y la disciplina deben practicarse con paciencia y
+                                    amor para generar un ambiente seguro.</li>
+                                <li><span style="color: #f47c5c"><strong>Comunícate con tu perro:</strong></span> <br>
+                                    Usa una voz cariñosa para fomentar la confianza. Observa sus señales
+                                    como el movimiento de la cola para entender su estado de ánimo.</li>
+                            </ul>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item2">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            <h3 style="font-family: 'Chewy', cursive; color:  #f47c5c;">GATOS</h3>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                            <ul>
+                                <li><span style="color: #f47c5c"><strong> Acércate con calma:</strong></span><br>
+
+                                    Siéntate o agáchate a su altura para no intimidarlo.
+                                    Evita el contacto directo en la cara y usa un tono de voz suave.
+                                </li>
+                                <li><span style="color: #f47c5c"><strong> Respeta su espacio:</strong></span> <br>
+                                    No lo obligues a interactuar si no quiere, especialmente si está comiendo o
+                                    durmiendo.
+                                    Dale la opción de retirarse siempre que lo necesite.</li>
+
+                                <li><span style="color: #f47c5c"><strong>Entiende su lenguaje corporal:</strong></span>
+                                    <br>
+                                    Una cola levantada y relajada es una señal
+                                    de que está contento. Si se muestra incómodo o asustado, dale espacio.
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            <h3 style="font-family: 'Chewy', cursive; color:  #f47c5c;">
+                                ENTONCES PARA AMARLOS</h3>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Solo debes de aprender a conocerlos, ten paciencia, acercate con cuidado y dales su
+                                espacio.
+                                Con el tiempo se abrirán y agarrarán confianza. Es muy importante que lo hagas,
+                                porque solo así crearás un espacio seguro y lleno de amor para los peludos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer style="background-color: #f3e2d9;">
+        <div class="container padding">
+            <div class="row">
+                <div class="col-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/pawlife.png" alt="Logo" width="auto" height="30">
+                        <h5 class="fw-bold mb-0" style="font-family: 'Chewy', cursive;">pawLlfe</h5>
+                    </div>
+                    <p>
+                        Cuidando a quienes más te quieren. ❤️
+                        Consejos y tips para mejorar la vida de tu mascota.
+                    </p>
+
+                </div>
+                <div class="col-4">
+                    <h5 class="fw-bold" style="font-family: 'Chewy', cursive;">Secciones</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-black-50 text-decoration-none">Inicio</a></li>
+                        <li><a href="#alimentacion" class="text-black-50 text-decoration-none">Alimentación</a></li>
+                        <li><a href="#salud" class="text-black-50 text-decoration-none">Salud</a></li>
+                        <li><a href="#educacion" class="text-black-50 text-decoration-none">Educación</a></li>
+                        <li><a href="#afecto" class="text-black-50 text-decoration-none">Afecto</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-4">
+                    <h5 class="fw-bold" style="font-family: 'Chewy', cursive;">Síguenos</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-black-50"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-black-50"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-black-50"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div style="background-color: #f47c5c;">
+                    <p class="text-center text-white-50 ">
+                        &copy; 2025 pawlife. Todos los derechos reservados. | Adopta, no compres 🐾
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        </div>
+
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+
+</html>
